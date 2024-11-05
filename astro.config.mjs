@@ -6,6 +6,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://uboar.github.io/voskey-docs',
 	integrations: [starlight({
 		title: 'Voskey Docs',
 		defaultLocale: 'ja',
