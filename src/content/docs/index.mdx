@@ -1,0 +1,32 @@
+---
+title: Voskey Docsへようこそ
+description: ぼすきーの利用規約や個別ルールを見る事が出来るページです。
+template: splash
+hero:
+  tagline: ぼすきーの利用規約や個別ルールを見る事が出来るページです。
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: 利用規約を見る
+      link: /terms/term
+      icon: right-arrow
+    - text: ぼすきーを見る
+      link: https://voskey.icalo.net
+      icon: external
+      variant: minimal
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## よく見られているページ
+
+<CardGrid>
+	<LinkCard title="利用規約" href="http://localhost:4321/terms/term">
+	</LinkCard>
+	<LinkCard title="言葉の定義" href="http://localhost:4321/rules/important/00-word-definition/">
+	</LinkCard>
+	<LinkCard title="モデレーションポリシー" href="http://localhost:4321/rules/important/01-moderation-policy/">
+	</LinkCard>
+	<LinkCard title="絵文字申請ルール" href="http://localhost:4321/emoji/00-index/">
+	</LinkCard>
+</CardGrid>
