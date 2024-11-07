@@ -8,6 +8,7 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	site: 'https://voskeydocs.icalo.net',
 	integrations: [starlight({
+		favicon: '/favicon.png',
 		title: 'Voskey Docs',
 		defaultLocale: 'ja',
 		customCss: [
