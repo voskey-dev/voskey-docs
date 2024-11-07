@@ -132,6 +132,8 @@ title: プライバシーポリシー
 
 2024年06月08日　第一条について、個人情報に含まれない範囲を追加
 
+以降の更新については、[GitHubのコミット履歴](https://github.com/voskey-dev/voskey-docs/tree/main)を参照の事。
+
 # 特記事項
 
 本内容は、[Misskey鯖缶Wiki](https://misskey-doc.7ka.org/ja/terms/policy)に記載されているテンプレートを基に作成しています。
