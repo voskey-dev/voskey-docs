@@ -10,7 +10,13 @@ export default defineConfig({
 	integrations: [starlight({
 		favicon: '/favicon.png',
 		title: 'Voskey Docs',
-		defaultLocale: 'ja',
+		defaultLocale: 'root',
+		locales: {
+			root: {
+				label: '日本語',
+				lang: 'ja-JP',
+			}
+		},
 		customCss: [
 			'./src/tailwind.css'
 		],
