@@ -1,0 +1,29 @@
+name: Notify Update By Bot
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SERVER_URL }}
+    env:
+      SERVER_URL: ${{ vars.SERVER_URL }}
+      BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: 20.x
+      - name: Setup
+        run: |
+          corepack enable
+          pnpm i --frozen-lockfile
+      - name: Run scripts/notify-update-by-bot.mjs
+        run: |
+          node scripts/notify-update-by-bot.mjs
