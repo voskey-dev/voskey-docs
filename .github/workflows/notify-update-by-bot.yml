@@ -11,11 +11,17 @@ jobs:
     if: ${{ vars.SERVER_URL }}
     env:
       SERVER_URL: ${{ vars.SERVER_URL }}
+      PAGES_URL: ${{ vars.PAGES_URL }}
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+      OLDER: ${{ github.event.before }}
+      NEWER: ${{ github.event.after }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Fetch Before-push commit
+        run: |
+          git fetch origin $OLDER
       - name: Setup Node.js
         uses: actions/setup-node@v4.1.0
         with:
