@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ vars.SERVER_URL }}
+    # if: ${{ vars.SERVER_URL }}
     env:
       SERVER_URL: ${{ vars.SERVER_URL }}
       PAGES_URL: ${{ vars.PAGES_URL }}
