@@ -38,7 +38,3 @@ title: JASRAC・NexTone管理楽曲について
 - Nextone管理楽曲　作品検索データベース
 
 [https://search.nex-tone.co.jp/](https://search.nex-tone.co.jp/)
-
-# 更新履歴
-
-- 2024.05.26 初版発行
