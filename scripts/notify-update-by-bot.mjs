@@ -10,6 +10,7 @@ const envValidators = {
   BOT_TOKEN: (v) => notEmpty(v),
   SERVER_URL: (v) => isURL(v),
   PAGES_URL: (v) => isURL(v),
+  GITHUB_REPOSITORY: (v) => notEmpty(v),
 };
 
 
@@ -94,6 +95,7 @@ const client = new api.APIClient({
 
 const text = `
 Voskey Docsが更新されました！
+[詳しい変更内容はこちら](https://github.com/${env.GITHUB_REPOSITORY}/compare/${env.OLDER}...${env.NEWER})
 
 ${diffDescriptions.join('\n')}
 `.trim();
