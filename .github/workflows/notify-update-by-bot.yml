@@ -4,6 +4,15 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      older_commit:
+        description: '古い方のコミットハッシュ（またはブランチ名）'
+        required: true
+        default: HEAD~1
+      newer_commit:
+        description: '新しい方のコミットハッシュ（またはブランチ名）'
+        required: true
+        default: HEAD
 
 jobs:
   deploy:
@@ -13,15 +22,14 @@ jobs:
       SERVER_URL: ${{ vars.SERVER_URL }}
       PAGES_URL: ${{ vars.PAGES_URL }}
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-      OLDER: ${{ github.event.before }}
-      NEWER: ${{ github.event.after }}
+      OLDER: ${{ inputs.older_commit || github.event.before }}
+      NEWER: ${{ inputs.newer_commit || github.event.after }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Fetch Before-push commit
-        run: |
-          git fetch origin $OLDER
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4.2.0
         with:
