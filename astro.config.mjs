@@ -25,8 +25,8 @@ export default defineConfig({
 		// },
 		sidebar: [
 			{
-				label: 'ランディングページ',
-				slug: 'landing'
+				label: '初めての方へ',
+				slug: 'for-beginner'
 			},
 			{
 				label: '利用規約・プライバシーポリシー',
