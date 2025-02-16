@@ -7,9 +7,14 @@ hero:
   image:
     file: ../../assets/houston.webp
   actions:
+    - text: 初めての方はこちら
+      link: /for-beginner
+      icon: right-arrow
+      variant: primary
     - text: 利用規約を見る
       link: /terms/term
       icon: right-arrow
+      variant: secondary
     - text: ぼすきーを見る
       link: https://voskey.icalo.net
       icon: external
@@ -25,6 +30,8 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 ## よく見られているページ
 
 <CardGrid>
+	<LinkCard title="初めての方へ" href="for-beginner">
+	</LinkCard>
 	<LinkCard title="利用規約" href="terms/term">
 	</LinkCard>
 	<LinkCard title="言葉の定義" href="rules/important/00-word-definition/">
