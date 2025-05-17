@@ -1,0 +1,43 @@
+---
+title: Voskey Docsへようこそ
+description: 分散型SNS「ぼすきー」の利用規約や各種ルールをご確認いただけるドキュメントです。
+template: splash
+hero:
+  tagline: 分散型SNS「ぼすきー」の利用規約や各種ルールをご確認いただけるドキュメントです。
+  image:
+    html: <img src="https://voskey-images.uboaruboar.workers.dev/?cond=docs" alt="voskey" width="250" height="auto" loading="eager" data-image-component="true" decoding="async" />
+  actions:
+    - text: 初めての方はこちら
+      link: /introduction/for-beginner
+      icon: right-arrow
+      variant: primary
+    - text: 利用規約を見る
+      link: /terms/term
+      icon: right-arrow
+      variant: secondary
+    - text: ぼすきーを見る
+      link: https://voskey.icalo.net
+      icon: external
+      variant: minimal
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## 更新履歴について
+
+本ドキュメントの更新履歴は、[voskey-docs GitHubリポジトリのコミット履歴](https://github.com/voskey-dev/voskey-docs/commits/main/)よりご確認いただけます。
+
+## よく参照されるページ
+
+<CardGrid>
+	<LinkCard title="初めての方へ" href="introduction/for-beginner">
+	</LinkCard>
+	<LinkCard title="利用規約" href="terms/term">
+	</LinkCard>
+	<LinkCard title="言葉の定義" href="rules/00-word-definition/">
+	</LinkCard>
+	<LinkCard title="モデレーションポリシー" href="rules/01-moderation-policy/">
+	</LinkCard>
+	<LinkCard title="絵文字申請ルール" href="features/emoji/00-index/">
+	</LinkCard>
+</CardGrid>

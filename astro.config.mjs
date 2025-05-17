@@ -57,6 +57,11 @@ export default defineConfig({
 				autogenerate: { directory: 'other' },
 				collapsed: true
 			},
+			{
+				label: 'docs改善用仮置きページ',
+				autogenerate: { directory: 'dev' },
+				collapsed: true
+			},
 		],
 	}), tailwind({
 		applyBaseStyles: false,
