@@ -36,25 +36,29 @@ export default defineConfig({
 				],
 			},
 			{
-				label: '個別ルール',
+				label: 'ルール全般',
 				items: [
-					{ label: '重要', autogenerate: { directory: 'rules/important' } },
-					{ label: 'その他', autogenerate: { directory: 'rules/other' }, collapsed: true },
+					{ label: '基本ルール', slug: 'core-rules' },
+					{ label: '個別詳細ルール', slug: 'specific-rules' },
+					{
+						label: 'ユーザー機能',
+						autogenerate: { directory: 'user-features' },
+						collapsed: true
+					},
+					{
+						label: 'コミュニティ運営',
+						autogenerate: { directory: 'community' },
+						collapsed: true
+					},
 				],
 			},
 			{
-				label: '絵文字申請ルール',
-				autogenerate: { directory: 'emoji' },
-				collapsed: true
+				label: '絵文字申請ガイド',
+				slug: 'emoji-guide',
 			},
 			{
-				label: 'ぼすきー内で特殊な事をしたい時に見るやつ',
+				label: '特殊なケース',
 				autogenerate: { directory: 'special' },
-				collapsed: true
-			},
-			{
-				label: 'その他のルール',
-				autogenerate: { directory: 'other' },
 				collapsed: true
 			},
 		],
